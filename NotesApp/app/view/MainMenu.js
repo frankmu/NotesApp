@@ -1,32 +1,17 @@
 Ext.define('NotesApp.view.MainMenu', {
-	extend: 'Ext.Panel',
-	requires: ['Ext.TitleBar'],
-	alias: 'widget.mainmenuview',
-	config: {
-		layout: {
-			type: 'fit'
-		},
-		items: [{
-			xtype: 'titlebar',
-			title: 'Main Menu',
-			docked: 'top',
-			items: [{
-				xtype: 'button',
-				text: 'Log Off',
-				itemId: 'logOffButton',
-				align: 'right'
-			}]
-		}],
-		listeners: [{
-			delegate: '#logOffButton',
-			event: 'tap',
-			fn: 'onLogOffButtonTap'
-		}],
-		onLogOffButtonTap: function() {
-			this.fireEvent('signOffCommand');
-		}
-
-
-
-	}
+    extend: 'Ext.tab.Panel',
+    require:['Ext.TitleBar'],
+    alias: 'widget.mainmenuview',
+    config:{
+        tabBarPosition:'top',
+        styleHtmlContent:true,
+        items:[
+            {
+                xtype:'mynotesbook'
+            },
+            {
+                xtype:'publicnotesbook'
+            }
+        ]
+    }
 });

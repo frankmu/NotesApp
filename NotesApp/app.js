@@ -12,10 +12,10 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
-    views: ['Login','MainMenu','Main','NotesList','NoteEditor'],
+    views: ['Login','MainMenu','NotesList','NoteEditor','MyNotesBook','PublicNotesBook'],
     models: ['Note'],
     stores: ['Notes'],
-    controllers: ['Login','Notes'],
+    controllers: ['Login','MainMenu','Notes'],
 
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -55,7 +55,7 @@ Ext.application({
         var mainmenu = {
             xtype: 'mainmenuview'
         };
-         Ext.Viewport.add([loginView,mainmenu]);
+         Ext.Viewport.add([loginView,mainmenu,notesListView,noteEditorView]);
     },
 
     onUpdated: function() {
