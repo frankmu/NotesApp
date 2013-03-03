@@ -34,14 +34,16 @@ Ext.define('NotesApp.controller.Login', {
 		me.signInSuccess();
 
 		// Ext.Ajax.request({
-		// 	url: '../../services/login.ashx',
+		// 	url: 'http://note.creatzy.com/auth/login',
 		// 	method: 'post',
 		// 	params: {
-		// 		user: username,
-		// 		pwd: password
+		// 		identity: username,
+		// 		password: password
 		// 	},
 		// 	success: function(response) {
+		// 		console.log(response);
 
+		// 		me.signInSuccess();
 		// 		var loginResponse = Ext.JSON.decode(response.responseText);
 
 		// 		if (loginResponse.success === "true") {

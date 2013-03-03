@@ -6,7 +6,7 @@ Ext.define('NotesApp.view.MyNotesBook', {
 		html: ['<p>here goes my notes book.</p>'],
 		items: [{
 			xtype: 'image',
-			src: '../../../img/NoteAppLogo.png',
+			src: '/NotesApp/img/NoteAppLogo.png',
 			style: 'width:100px;height:100px',
 			itemId: 'notesBook',
 		}],

@@ -6,7 +6,7 @@ Ext.define('NotesApp.view.Login', {
 		title: 'Login',
 		items: [{
 			xtype: 'image',
-			src: Ext.Viewport.getOrientation() == 'portrait' ? '../../../img/NoteAppLogo.png' : '../../../img/NoteAppLogo.png',
+			src: Ext.Viewport.getOrientation() == 'portrait' ? '/NotesApp/img/NoteAppLogo.png' : '/NotesApp/img/NoteAppLogo.png',
 			style: Ext.Viewport.getOrientation() == 'portrait' ? 'width:100px;height:100px;margin:auto' : 'width:50px;height:50px;margin:auto'
 		}, {
 			xtype: 'label',
