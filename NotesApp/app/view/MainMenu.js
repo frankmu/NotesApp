@@ -3,14 +3,24 @@ Ext.define('NotesApp.view.MainMenu', {
     require:['Ext.TitleBar'],
     alias: 'widget.mainmenuview',
     config:{
-        tabBarPosition:'top',
+        tabBarPosition: 'bottom',        
         styleHtmlContent:true,
         items:[
             {
-                xtype:'mynotesbook'
+                xclass:'NotesApp.view.home.Card'
             },
             {
-                xtype:'publicnotesbook'
+                xclass:'NotesApp.view.settings.Card'
+            },
+            {
+                xclass:'NotesApp.view.following.Card'
+            },
+            
+            {
+                xclass:'NotesApp.view.comments.Card'
+            },
+            {
+                xclass:'NotesApp.view.friend.Card'
             }
         ]
     }

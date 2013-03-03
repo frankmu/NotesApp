@@ -1,4 +1,4 @@
-Ext.define('NotesApp.view.MyNotesBook', {
+Ext.define('NotesApp.view.home.MyNotesBook', {
 	extend: 'Ext.Panel',
 	xtype: 'mynotesbook',
 	config: {

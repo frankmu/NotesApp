@@ -12,7 +12,19 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
-    views: ['Login','MainMenu','NotesList','NoteEditor','MyNotesBook','PublicNotesBook'],
+    views: [
+        'Login',
+        'MainMenu',
+        'NotesList',
+        'NoteEditor',
+        'home.Card',
+        'home.MyNotesBook',
+        'home.PublicNotesBook',
+        'comments.Card',
+        'following.Card',
+        'friend.Card',
+        'settings.Card',
+    ],
     models: ['Note'],
     stores: ['Notes'],
     controllers: ['Login','MainMenu','Notes'],

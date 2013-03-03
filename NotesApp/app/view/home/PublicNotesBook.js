@@ -1,4 +1,4 @@
-Ext.define('NotesApp.view.PublicNotesBook', {
+Ext.define('NotesApp.view.home.PublicNotesBook', {
     extend: 'Ext.Panel',
     xtype:'publicnotesbook',
     config:{
