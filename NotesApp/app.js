@@ -25,8 +25,8 @@ Ext.application({
         'friend.Card',
         'settings.Card',
     ],
-    models: ['Note'],
-    stores: ['Notes'],
+    models: ['Note','Notebook'],
+    stores: ['Notes','Notebooks'],
     controllers: ['Login','MainMenu','Notes'],
 
     icon: {

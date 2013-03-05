@@ -1,22 +1,28 @@
 Ext.define('NotesApp.view.home.MyNotesBook', {
-	extend: 'Ext.Panel',
+	extend: 'Ext.navigation.View',
+	requires: ['Ext.dataview.List'],
 	xtype: 'mynotesbook',
 	config: {
+		fullscreen:false,
+		layout: 'card',
 		title: 'My Notes Book',
-		html: ['<p>here goes my notes book.</p>'],
 		items: [{
-			xtype: 'image',
-			src: '/NotesApp/img/NoteAppLogo.png',
-			style: 'width:100px;height:100px',
-			itemId: 'notesBook',
+			xtype: 'list',
+			store: 'Notebooks',
+			itemId: 'notebooks',
+			onItemDisclosure: true,
+			loadingText: 'Loading Notes...',
+			emptyText: '<div class="notes-list-empty-text">No notesbook found.</div>',
+			itemTpl: '<div class="notebook_img"><img src={img} width="50px"/></div><div class="notebook_title">{title}</div>'
 		}],
 		listeners: [{
-			delegate: '#notesBook',
-			event: 'tap',
+			delegate: '#notebooks',
+			event: 'disclose',
 			fn: 'onNotesBookTap'
 		}],
 	},
-	onNotesBookTap:function(){
-		this.fireEvent('showNotesBook', this);
+	onNotesBookTap:function(list, record, target, index, evt,options){
+		console.log("open note book");
+		this.fireEvent('showNotesBook', this, record);
 	}
 });

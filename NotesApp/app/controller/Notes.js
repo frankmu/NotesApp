@@ -4,7 +4,8 @@ Ext.define('NotesApp.controller.Notes', {
 		refs: {
 			// We're going to look up our views by xtype.
 			notesListView: 'noteslistview',
-			noteEditorView: 'noteeditorview'
+			noteEditorView: 'noteeditorview',
+			myNotesBookView:'mynotesbook',
 		},
 		control: {
 			notesListView: {
@@ -50,9 +51,15 @@ Ext.define('NotesApp.controller.Notes', {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	},
 	activateNoteEditor: function(record) {
-		var noteEditorView = this.getNoteEditorView();
-		noteEditorView.setRecord(record);
-		Ext.Viewport.animateActiveItem(noteEditorView, this.slideLeftTransition);
+		if (!this.showNoteEditorView) {
+            this.NoteEditorView = Ext.create('NotesApp.view.NoteEditor');
+        }
+
+
+		//var noteEditorView = this.getNoteEditorView();
+		this.NoteEditorView.setRecord(record);
+		//Ext.Viewport.animateActiveItem(noteEditorView, this.slideLeftTransition);
+		this.getMyNotesBookView().push(this.NoteEditorView);
 	},
 	slideLeftTransition: {
 		type: 'slide',
@@ -65,6 +72,7 @@ Ext.define('NotesApp.controller.Notes', {
 	onEditNoteCommand: function(list, record) {
 		console.log('onEditNoteCommand');
 		this.activateNoteEditor(record);
+		console.log('haha');
 	},
 	onSaveNoteCommand: function() {
 		console.log('onSaveNoteCommand');
@@ -93,7 +101,9 @@ Ext.define('NotesApp.controller.Notes', {
 		this.activateNotesList();
 	},
 	activateNotesList: function() {
-		Ext.Viewport.animateActiveItem(this.getNotesListView(), this.slideRightTransition);
+		console.log('hahas');
+		//Ext.Viewport.animateActiveItem(this.getNotesListView(), this.slideRightTransition);
+		this.getMyNotesBookView().pop();
 	},
 
 	onDeleteNoteCommand: function () {
