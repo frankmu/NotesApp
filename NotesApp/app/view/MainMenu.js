@@ -10,6 +10,9 @@ Ext.define('NotesApp.view.MainMenu', {
                 xclass:'NotesApp.view.home.Card'
             },
             {
+                xclass:'NotesApp.view.public.Card'
+            },
+            {
                 xclass:'NotesApp.view.settings.Card'
             },
             {
@@ -19,9 +22,7 @@ Ext.define('NotesApp.view.MainMenu', {
             {
                 xclass:'NotesApp.view.comments.Card'
             },
-            {
-                xclass:'NotesApp.view.friend.Card'
-            }
+            
         ]
     }
 });

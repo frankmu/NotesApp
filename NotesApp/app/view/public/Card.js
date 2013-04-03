@@ -1,10 +1,14 @@
-Ext.define('NotesApp.view.home.PublicNotesBook', {
-    extend: 'Ext.Panel',
+Ext.define('NotesApp.view.public.Card', {
+	extend: 'Ext.navigation.View',
+	requires: ['Ext.dataview.List'],
     xtype:'publicnotesbook',
-    config:{
-        title:'public Notes Book',
-        html:['<p>here goes public notes book.</p>'],
-        items: [{
+	config: {
+		title: 'Public Notes',
+		iconCls: 'user',
+		autoDestroy: false,
+		tabBarPosition: 'top',
+		styleHtmlContent: true,
+		items: [{
 			xtype: 'image',
 			src: '/NotesApp/img/NoteAppLogo.png',
 			style: 'width:100px;height:100px',
@@ -15,8 +19,8 @@ Ext.define('NotesApp.view.home.PublicNotesBook', {
 			event: 'tap',
 			fn: 'onNotesBookTap'
 		}],
-    },
-    onNotesBookTap:function(){
+	},
+	onNotesBookTap:function(){
 		this.fireEvent('showNotesBook', this);
 	}
 });

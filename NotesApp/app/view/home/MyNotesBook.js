@@ -5,7 +5,7 @@ Ext.define('NotesApp.view.home.MyNotesBook', {
 	config: {
 		fullscreen:false,
 		layout: 'card',
-		title: 'My Notes Book',
+		title: 'My Notes',
 		items: [{
 			xtype: 'list',
 			store: 'Notebooks',
