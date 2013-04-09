@@ -19,7 +19,7 @@ Ext.define('NotesApp.controller.MainMenu', {
 		}
 	},
 	onShowNotesBookCommand:function(record){
-		console.log("go to notes list"+record);
+		console.log(record);
 		//notesListView = this.getNotesListView();
 		//this.getMyNotesBookView().animateActiveItem(notesListView, this.getSlideLeftTransition());
 		if (!this.showNotesListView) {
