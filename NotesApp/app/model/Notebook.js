@@ -6,11 +6,11 @@ Ext.define('NotesApp.model.Notebook', {
 			name: 'id',
 			type: 'int'
 		}, {
-			name: 'dateCreated',
+			name: 'date',
 			type: 'date',
 			dateFormat: 'c'
 		}, {
-			name: 'title',
+			name: 'name',
 			type: 'string'
 		}, {
 			name: 'img',

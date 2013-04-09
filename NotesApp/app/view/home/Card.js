@@ -16,7 +16,7 @@ Ext.define('NotesApp.view.home.Card', {
 			onItemDisclosure: true,
 			loadingText: 'Loading Notes...',
 			emptyText: '<div class="notes-list-empty-text">No notesbook found.</div>',
-			itemTpl: '<div class="notebook_img"><img src={img} width="50px"/></div><div class="notebook_title">{title}</div>'
+			itemTpl: '<div class="notebook_title">{name}</div>'
 		}],
 		listeners: [{
 			delegate: '#notebooks',
@@ -26,6 +26,9 @@ Ext.define('NotesApp.view.home.Card', {
 	},
 	onNotesBookTap:function(list, record, target, index, evt,options){
 		console.log("open note book");
+		//console.log(this);
+		//console.log(index);
+		console.log(record);
 		this.fireEvent('showNotesBook', this, record);
 	}
 });

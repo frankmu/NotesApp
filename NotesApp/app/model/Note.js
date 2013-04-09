@@ -6,14 +6,14 @@ Ext.define('NotesApp.model.Note', {
 			name: 'id',
 			type: 'int'
 		}, {
-			name: 'dateCreated',
+			name: 'create_date',
 			type: 'date',
 			dateFormat: 'c'
 		}, {
-			name: 'title',
+			name: 'notename',
 			type: 'string'
 		}, {
-			name: 'narrative',
+			name: 'content',
 			type: 'string'
 		}],
 		validations: [{
@@ -21,10 +21,10 @@ Ext.define('NotesApp.model.Note', {
 			field: 'id'
 		}, {
 			type: 'presence',
-			field: 'dateCreated'
+			field: 'create_date'
 		}, {
 			type: 'presence',
-			field: 'title',
+			field: 'notename',
 			message: 'Please enter a title for this note.'
 		}]
 	}
