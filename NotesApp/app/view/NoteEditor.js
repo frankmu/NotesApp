@@ -34,13 +34,13 @@ Ext.define('NotesApp.view.NoteEditor', {
 			xtype: 'fieldset',
 			items: [{
 				xtype: 'textfield',
-				name: 'title',
+				name: 'notename',
 				label: 'Title',
 				required: true
 			}, {
 				xtype: 'textareafield',
-				name: 'narrative',
-				label: 'Narrative'
+				name: 'content',
+				label: 'content'
 			}]
 		}],
 		listeners: [{
