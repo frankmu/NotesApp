@@ -3,17 +3,9 @@ Ext.define('NotesApp.store.Notes', {
 	requires: ['Ext.data.proxy.LocalStorage'],
 	config: {
 		model: 'NotesApp.model.Note',
-		// data: [{
-		// 	title: 'Note 1',
-		// 	narrative: 'narrative 1'
-		// }, {
-		// 	title: 'Note 2',
-		// 	narrative: 'narrative 2'
-		// }],
-		// autoLoad: true,
 		proxy: {
-			type: 'localstorage',
-			id: 'notes-app-store'
+			type: 'ajax',
+			url:"http://note.creatzy.com/notes/getNoteList?notebookId=1",
 		},
 		sorters: [{
 			property: 'dateCreated',
