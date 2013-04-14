@@ -6,6 +6,18 @@ lib-cov
 *.out
 *.pid
 *.gz
+<<<<<<< HEAD
 node_modules
 npm-debug.log
+=======
+node_modules/*
+pids
+logs
+results
+
+npm-debug.log
+
+.DS_Store
+
+>>>>>>> ffa5889952c1f85ddbcf0665d315021d5fdeae5a
 .project
